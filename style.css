@@ -1,0 +1,19 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 50px;
+}
+
+.welcom {
+  background-color: #c7ddea;
+  padding: 20px;
+}
+
+.up {
+  background-color: #f17949;
+  padding: 20px;
+}
+.down {
+  background-color: #ffb939;
+  padding: 20px;
+}
