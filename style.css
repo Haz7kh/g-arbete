@@ -55,7 +55,7 @@ body {
 .headerLeft span {
   color: white;
 }
-.header button {
+.btn {
   margin-top: 3.438rem;
   width: 8.188rem;
   height: 2.438rem;
@@ -67,6 +67,7 @@ body {
   line-height: 0.75rem;
   font-weight: 700;
   font-family: "Fira Sans", sans-serif;
+  cursor: pointer;
 }
 .headerLeft img {
   width: 17.875rem;
@@ -78,8 +79,9 @@ body {
   width: 50%;
 }
 
-.headerRight h1 {
+.headerRight a {
   letter-spacing: -0.04rem;
+  text-decoration: none;
   text-align: center;
   width: 15.625rem;
   height: 2.563rem;
@@ -129,9 +131,9 @@ nav {
   height: 3.563rem;
   display: flex;
   justify-content: center;
-  align-items: center ;
- margin-top: 0.438rem;
- margin-bottom: 0.25rem;
+  align-items: center;
+  margin-top: 0.438rem;
+  margin-bottom: 0.25rem;
 }
 
 nav a {
@@ -142,6 +144,7 @@ nav a {
   font-size: 0.75rem;
   font-weight: 600;
   color: black;
+
   font-family: "Fira Sans", sans-serif;
 }
 nav :nth-child(2) {
