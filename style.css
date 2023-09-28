@@ -138,15 +138,15 @@ nav a {
 
   font-family: "Fira Sans", sans-serif;
 }
-
+/* **active home *** */
 nav a.active {
   color: black;
   opacity: 1;
 }
 
 /******nav slut****/
+
 /* khaled style */
-/* Style the custom section */
 .custom-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
