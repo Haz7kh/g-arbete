@@ -6,19 +6,9 @@
 body {
   background-color: rgba(235, 235, 235, 1);
   height: 100vh;
-  width: 100vw;
-  margin: 0 auto;
+  margin: 0 70px;
 }
-.wrapper {
-  padding: 0;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 34rem auto;
-  width: 100vw;
-  height: auto;
-  max-width: 62.5rem;
-}
+
 .header {
   display: flex;
   justify-content: center;
@@ -144,29 +134,164 @@ nav a {
   font-size: 0.75rem;
   font-weight: 600;
   color: black;
+  opacity: 0.4;
 
   font-family: "Fira Sans", sans-serif;
 }
-nav :nth-child(2) {
-  opacity: 0.4;
-}
-nav :nth-child(3) {
-  opacity: 0.4;
-}
-nav :nth-child(4) {
-  opacity: 0.4;
-}
-/******nav slut****/
 
+nav a.active {
+  color: black;
+  opacity: 1;
+}
+
+/******nav slut****/
+/* khaled style */
+/* Style the custom section */
+.custom-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  margin: auto;
+  padding: 40px;
+  border: 1px solid #ccc;
+  background-color: #a9a19e;
+  height: 612px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Style the custom section title */
+.custom-section h1 {
+  font-size: 45px;
+  margin-bottom: 10px;
+  margin-top: 70px;
+  color: white;
+  width: 314px;
+}
+
+/* Style the custom section description */
+.custom-section p {
+  font-size: 14px;
+  margin-top: 70px;
+  width: 280px;
+}
+/* Style the about container */
+.about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fab131;
+  height: 680px;
+  position: relative;
+  z-index: 1; /* Adjusted the z-index to be behind the custom section */
+}
+
+/* Style the about section */
+.about {
+  text-align: center;
+  max-width: 442px;
+  padding: 20px;
+  z-index: 2;
+}
+.about h1 {
+  color: white;
+  font-size: 45px;
+  margin-bottom: 10px;
+}
+
+/* Style the card container */
+.card-container {
+  display: flex;
+  margin: 20px;
+  justify-content: space-between;
+  gap: 25px;
+  position: absolute;
+  left: 50%;
+  top: 153%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+/* Style the cards */
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 256px;
+  height: 308px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  text-align: center;
+  background-color: white;
+  justify-content: center;
+}
+
+.img-card1 {
+  height: 150px;
+  width: 225px;
+  position: relative;
+  transform: translateY(-43px);
+  background-color: #c7ddea;
+  background-image: url(images/child.png);
+
+  background-position: 50% -20%;
+  background-size: 100px 160px;
+  background-repeat: no-repeat;
+}
+
+.img-card2 {
+  height: 150px;
+  width: 225px;
+  position: relative;
+  transform: translateY(-43px);
+  background-color: #fab131;
+  background-image: url(images/adult.png);
+
+  background-position: 50% -15%;
+  background-size: 80px 300px;
+  background-repeat: no-repeat;
+}
+
+.img-card3 {
+  height: 150px;
+  width: 225px;
+  position: relative;
+  transform: translateY(-43px);
+  background-color: #f17949;
+  background-image: url(images/old.png);
+
+  background-position: 50% -10%;
+  background-size: 100px 350px;
+  background-repeat: no-repeat;
+}
+
+/* Style the card title */
+.card h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Style the card description */
+.card p {
+  font-size: 14px;
+  color: #333;
+}
+
+/*............................................*/
 /******boxes start*****/
+
+.box-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
 
 .box {
   height: 21.25rem;
-  margin:0;
+  margin: 0;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-
 }
 .boxNumber {
   width: 6.25rem;
@@ -196,8 +321,8 @@ nav :nth-child(4) {
 }
 
 .box h1 {
-  width:19.625rem;
-  height:6.313rem;
+  width: 19.625rem;
+  height: 6.313rem;
   line-height: 100%;
   color: rgba(0, 0, 0, 0.8);
   font-family: "Frank Ruhl Libre", serif;
@@ -205,7 +330,7 @@ nav :nth-child(4) {
   text-align: center;
   font-weight: 900;
 }
-#box00{
+#box00 {
   grid-column: 1/3;
   display: flex;
   justify-content: center;
@@ -232,4 +357,25 @@ nav :nth-child(4) {
 #box05 {
   grid-column: 5/7;
   background-color: rgba(255, 255, 255, 1);
+}
+
+/* ******Footer ***** */
+
+.go-up {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 68px;
+  background-color: #a9a19e;
+}
+.go-up a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #333;
+}
+
+.footerBottom {
+  height: 340px;
+  background-color: #777574;
 }
