@@ -6,9 +6,25 @@
 body {
   background-color: rgba(235, 235, 235, 1);
   height: 100vh;
-  margin: 0 70px;
+  width: 100vw;
+  margin: 0 auto;
 }
-
+body p, a{
+  font-family: "Fira Sans", sans-serif;
+}
+body h1, h2{
+  font-family: "Frank Ruhl Libre", serif;
+}
+.wrapper {
+  padding: 0;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 34rem auto;
+  width: 100vw;
+  height: auto;
+  max-width: 62.5rem;
+}
 .header {
   display: flex;
   justify-content: center;
@@ -28,31 +44,30 @@ body {
   height: 6.313rem;
   font-size: 2.813rem;
   font-weight: 900;
-  font-family: "Frank Ruhl Libre", serif;
+
   line-height: 2.813rem;
   word-wrap: break-word;
 }
-.headerLeft div {
+.headerLeft p {
   color: rgba(0, 0, 0, 0.6);
-  font-family: "Fira Sans", sans-serif;
   font-size: 0.875rem;
   font-weight: 700;
   line-height: 1.5rem;
   word-wrap: break-word;
   width: 16.75rem;
   height: 6.438rem;
+  margin-block-end: 3.438rem;
 }
 .headerLeft span {
   color: white;
 }
 .btn {
-  margin-top: 3.438rem;
   width: 8.188rem;
   height: 2.438rem;
   color: rgba(0, 0, 0, 0.8);
   border-radius: 6.25rem;
   border: none;
-  box-shadow: rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.10);
   font-size: 0.625rem;
   line-height: 0.75rem;
   font-weight: 700;
@@ -87,7 +102,6 @@ body {
   width: 15.625rem;
   height: 1.063rem;
   color: rgba(0, 0, 0, 0.5);
-  font-family: "Fira Sans", sans-serif;
   font-size: 0.688rem;
   font-weight: 700;
   line-height: 0.825rem;
@@ -136,163 +150,164 @@ nav a {
   color: black;
   opacity: 0.4;
 
-  font-family: "Fira Sans", sans-serif;
 }
-/* **active home *** */
-nav a.active {
-  color: black;
+nav .active {
   opacity: 1;
 }
-
 /******nav slut****/
 
-/* khaled style */
-.custom-section {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 10px;
-  margin: auto;
-  padding: 40px;
-  border: 1px solid #ccc;
-  background-color: #a9a19e;
-  height: 612px;
-  position: relative;
-  z-index: 2;
+/****main start***/
+main {
+  grid-column: 1/7;
+}
+main h1 { /* */
+  font-size: 2.813rem;
+  font-weight: 900;
+  line-height: 100%;
+  color: rgba(255, 255, 255, 1);
 }
 
-/* Style the custom section title */
-.custom-section h1 {
-  font-size: 45px;
-  margin-bottom: 10px;
-  margin-top: 70px;
-  color: white;
-  width: 314px;
-}
 
-/* Style the custom section description */
-.custom-section p {
-  font-size: 14px;
-  margin-top: 70px;
-  width: 280px;
-}
-/* Style the about container */
-.about-container {
+.mainTop {
+  padding-top: 6.44rem;
+  padding-left: 6.69rem;
+  padding-right: 8.06rem;
   display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: rgba(169, 161, 158, 1);
+  height: 38.25rem;
+}
+.mainTop h1 {
+  width: 19.625rem;
+  height: 8.75rem;
+}
+.mainTop p {
+  font-size: 0.875rem;
+  width: 17.5rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+  color: rgba(0, 0, 0, 0.60);
+}
+.mainTop .btn{
+  position: absolute;
+  top:18.81rem;
+
+}
+.mainAbout {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #fab131;
-  height: 680px;
-  position: relative;
-  z-index: 1; /* Adjusted the z-index to be behind the custom section */
+  background-color: rgba(250, 177, 49, 1);
+  height: 42.5rem;
 }
-
-/* Style the about section */
-.about {
+.mainAbout h1 {
+  padding: 1.5rem;
+}
+.mainAbout p {
   text-align: center;
-  max-width: 442px;
-  padding: 20px;
-  z-index: 2;
-}
-.about h1 {
-  color: white;
-  font-size: 45px;
-  margin-bottom: 10px;
+  width: 27.625rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.25rem;
+  color: rgba(0, 0, 0, 0.60);
+
 }
 
-/* Style the card container */
 .card-container {
   display: flex;
-  margin: 20px;
+  align-items: center;
   justify-content: space-between;
-  gap: 25px;
+  gap: 1.563rem;
   position: absolute;
   left: 50%;
   top: 153%;
   transform: translateX(-50%);
-  z-index: 3;
+
 }
 
 /* Style the cards */
 .card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  width: 256px;
-  height: 308px;
-  padding: 20px;
-  border: 1px solid #ccc;
+  align-items: center;
+  width: 16rem;
+  height: 19.25rem;
+  border-radius: 0.313rem;
   text-align: center;
   background-color: white;
-  justify-content: center;
+
 }
 
 .img-card1 {
-  height: 150px;
-  width: 225px;
+  border-radius: 0.25rem;
+  height: 9.375rem;
+  width: 14.75rem;
   position: relative;
-  transform: translateY(-43px);
+  transform: translateY(-1.625rem);
   background-color: #c7ddea;
-  background-image: url(images/child.png);
-
-  background-position: 50% -20%;
-  background-size: 100px 160px;
+  background-image: url(images/child-card.png);
+  background-position: 50% 100%;
   background-repeat: no-repeat;
 }
 
 .img-card2 {
-  height: 150px;
-  width: 225px;
+  border-radius: 0.25rem;
+  height: 9.375rem;
+  width: 14.75rem;
   position: relative;
-  transform: translateY(-43px);
+  transform: translateY(-1.625rem);
   background-color: #fab131;
-  background-image: url(images/adult.png);
-
-  background-position: 50% -15%;
-  background-size: 80px 300px;
+  background-image:url(images/adult.png);
+  background-size: 6.25rem;
+  background-position:50% -5%;
   background-repeat: no-repeat;
 }
 
 .img-card3 {
-  height: 150px;
-  width: 225px;
+  border-radius: 0.25rem;
+  height: 9.375rem;
+  width: 14.75rem;
   position: relative;
-  transform: translateY(-43px);
+  transform: translateY(-1.625rem);
   background-color: #f17949;
-  background-image: url(images/old.png);
-
-  background-position: 50% -10%;
-  background-size: 100px 350px;
+  background-image: url(images/Group.png);
+  background-position: 50% 100%;
   background-repeat: no-repeat;
 }
 
 /* Style the card title */
 .card h2 {
-  font-size: 18px;
-  margin-bottom: 10px;
+  color: rgba(0, 0, 0, 0.90);
+  font-size: 1rem;
+  margin-bottom: 0.625rem;
 }
 
 /* Style the card description */
 .card p {
-  font-size: 14px;
-  color: #333;
+  color:rgba(0, 0, 0, 0.4);
+  line-height: 1.125rem;
+  font-weight: 700;
+  width:13.375rem;
+  font-size: 0.688rem;
 }
 
-/*............................................*/
+
+
+
+
+
 /******boxes start*****/
-
-.box-container {
+.boxes {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
 }
-
 .box {
   height: 21.25rem;
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
 }
+
+/****styling boxes number***/
 .boxNumber {
   width: 6.25rem;
   height: 6.25rem;
@@ -301,15 +316,14 @@ nav a.active {
   justify-content: center;
   align-items: center;
   color: rgba(0, 0, 0, 0.4);
-  font-family: "Frank Ruhl Libre", serif;
   font-size: 2.188rem;
   font-weight: 900;
 }
 .boxParagraph {
+  /****paragraphstyling to boxes****/
   width: 16.063rem;
   height: 7.063rem;
   color: rgba(0, 0, 0, 0.7);
-  font-family: "Fira Sans", sans-serif;
   font-weight: 600;
   font-size: 1.063rem;
   line-height: 1.25rem;
@@ -321,11 +335,8 @@ nav a.active {
 }
 
 .box h1 {
-  width: 19.625rem;
-  height: 6.313rem;
   line-height: 100%;
   color: rgba(0, 0, 0, 0.8);
-  font-family: "Frank Ruhl Libre", serif;
   font-size: 2.813rem;
   text-align: center;
   font-weight: 900;
@@ -333,9 +344,8 @@ nav a.active {
 #box00 {
   grid-column: 1/3;
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin: 0;
+  justify-content: center;
   background-color: rgba(199, 221, 234, 1);
 }
 #box01 {
@@ -359,15 +369,23 @@ nav a.active {
   background-color: rgba(255, 255, 255, 1);
 }
 
-/* ******Footer ***** */
 
+
+/**styling footer**/
+footer { 
+  display: grid;
+  grid-column: 1/7;
+}
 .go-up {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 68px;
+  height: 4.25rem;
   background-color: #a9a19e;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 1.0625rem;
+  font-weight: 600;
 }
 .go-up a {
   text-decoration: none;
@@ -376,6 +394,6 @@ nav a.active {
 }
 
 .footerBottom {
-  height: 340px;
+  height: 21.25rem;
   background-color: #777574;
 }
